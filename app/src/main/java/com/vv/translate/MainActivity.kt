@@ -1,5 +1,6 @@
 package com.vv.translate
 
+import androidx.compose.material3.ExperimentalMaterial3Api
 import android.Manifest
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
@@ -87,6 +88,17 @@ private val languages = listOf(
     Language("한국어", TranslateLanguage.KOREAN)
 )
 
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun TranslateScreen() {
+
+    // 前面的代码……
+
+    MaterialTheme {
+
+        Scaffold(
+            topBar = {
+                TopAppBar(
 @Composable
 fun VVTranslateApp() {
 
