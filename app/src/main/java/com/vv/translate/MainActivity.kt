@@ -90,16 +90,6 @@ private val languages = listOf(
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun TranslateScreen() {
-
-    // 前面的代码……
-
-    MaterialTheme {
-
-        Scaffold(
-            topBar = {
-                TopAppBar(
-@Composable
 fun VVTranslateApp() {
 
     val context = LocalContext.current
