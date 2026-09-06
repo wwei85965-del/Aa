@@ -8,7 +8,16 @@ android {
     namespace = "com.vv.translate"
     compileSdk = 35
 
-    defaultConfig {
+compileOptions {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+kotlinOptions {
+    jvmTarget = "17"
+}
+    
+defaultConfig {
         applicationId = "com.vv.translate"
         minSdk = 24
         targetSdk = 35
