@@ -1,55 +1,33 @@
-plugins {
-    id("com.android.application")
-    id("org.jetbrains.kotlin.android")
-    id("org.jetbrains.kotlin.plugin.compose")
-}
+<?xml version="1.0" encoding="utf-8"?>
 
-android {
-    namespace = "com.vv.translate"
-    compileSdk = 35
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    defaultConfig {
-        applicationId = "com.vv.translate"
-        minSdk = 24
-        targetSdk = 35
-        versionCode = 1
-        versionName = "1.0"
-    }
+    <uses-permission
+        android:name="android.permission.CAMERA" />
 
-    buildFeatures {
-        compose = true
-    }
+    <application
+        android:allowBackup="true"
+        android:label="VV Translate"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.VVTranslate">
 
-    packaging {
-        resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1}"
-        }
-    }
-}
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
 
-dependencies {
-    implementation(platform("androidx.compose:compose-bom:2024.12.01"))
+            <intent-filter>
 
-    implementation("androidx.activity:activity-compose:1.10.0")
-    implementation("androidx.compose.ui:ui")
-    implementation("androidx.compose.ui:ui-tooling-preview")
-    implementation("androidx.compose.material3:material3")
-    implementation("androidx.compose.material:material-icons-extended")
+                <action
+                    android:name="android.intent.action.MAIN" />
 
-    debugImplementation("androidx.compose.ui:ui-tooling")
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
 
-    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.8.7")
+            </intent-filter>
 
-    // 协程
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.9.0")
+        </activity>
 
-    // ML Kit 中文 OCR
-    implementation("com.google.mlkit:text-recognition-chinese:16.0.1")
+    </application>
 
-    // ML Kit 自动语言识别
-    implementation("com.google.mlkit:language-id:17.0.6")
-
-    // ML Kit 翻译
-    implementation("com.google.mlkit:translate:17.0.3")
-}
+</manifest>
