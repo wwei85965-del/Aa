@@ -61,6 +61,7 @@ import com.google.mlkit.vision.text.TextRecognition
 import com.google.mlkit.vision.text.chinese.ChineseTextRecognizerOptions
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
+import androidx.activity.compose.setContent
 
 class MainActivity : ComponentActivity() {
 
