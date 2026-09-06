@@ -8,16 +8,16 @@ android {
     namespace = "com.vv.translate"
     compileSdk = 35
 
-compileOptions {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
-}
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
 
-kotlinOptions {
-    jvmTarget = "17"
-}
-    
-defaultConfig {
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    defaultConfig {
         applicationId = "com.vv.translate"
         minSdk = 24
         targetSdk = 35
@@ -59,12 +59,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.9.0")
 
     // Google ML Kit
-    // 中文 OCR
     implementation("com.google.mlkit:text-recognition-chinese:16.0.1")
-
-    // 自动识别语言
     implementation("com.google.mlkit:language-id:17.0.6")
-
-    // 翻译
     implementation("com.google.mlkit:translate:17.0.3")
 }
